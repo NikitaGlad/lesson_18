@@ -56,13 +56,23 @@ console.log(getLocalDate(new Date(123456), true, true));
 // #3
 
 let getWeekDay = (d) => {
-    const date = new Date(d);
-    const days = ['среда', 'суббота', 'вторник', 'пятница', 'понедельк', 'четверг', 'воскресенье'];
-    return days[date.getDay()];
-}
-console.log(getWeekDay('2020-05-21')); // понедельник
-console.log(getWeekDay('2020-06-08')); // суббота
-console.log(getWeekDay('2055-05-21')); // четверг
+  const date = new Date(d);
+  const days = [
+    'воскресенье',
+    'понедельник',
+    'вторник',
+    'среда',
+    'четверг',
+    'пятница',
+    'суббота'
+  ];
+
+  return days[date.getDay()];
+};
+
+console.log(getWeekDay('2019-01-30')); // среда
+console.log(getWeekDay('2019-07-16')); // вторник
+console.log(getWeekDay('2019-07-27')); // суббота
 
 // #4
 
